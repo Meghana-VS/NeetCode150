@@ -8,10 +8,15 @@ public class ValidPalindrome {
     public static boolean isPalindrome(String s) {
         String newStr = s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
         int n = newStr.length();
-        StringBuilder sb = new StringBuilder();
-        for(int i=n-1; i>=0; i--){
-            sb.append(newStr.charAt(i));
-        }
-        return newStr.equals(sb.toString());
+//        StringBuilder sb = new StringBuilder();
+//        for(int i=n-1; i>=0; i--){
+//            sb.append(newStr.charAt(i));
+//        }
+//        return newStr.equals(sb.toString());
+
+//*******************************************************************************************
+
+        String reversed = new StringBuilder(newStr).reverse().toString();
+        return newStr.equals(reversed);
     }
 }
